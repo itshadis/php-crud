@@ -5,7 +5,7 @@
   $id = $_GET["id"];
   try {
     $query = "DELETE FROM pegawai WHERE id=$id";
-    mysqli_query($connection, $query);
+    $db->query($query);
 
     header("Location:list.php");
 

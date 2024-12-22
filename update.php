@@ -23,7 +23,7 @@
               WHERE id=$id 
              ";
 
-    mysqli_query($connection, $query);
+    $db->query($query);
     header("Location:list.php");
 
   } catch (Exception $e) {

@@ -11,11 +11,10 @@
   $status = $_POST["status"];
   
   try {
-    $query = "INSERT INTO pegawai (nama, jenis_kelamin, alamat, tempat_lahir, tanggal_lahir, nomor_seluler, status)
-                  VALUES ('$nama', '$jenis_kelamin', '$alamat', '$tempat_lahir', '$tanggal_lahir', '$nomor_seluler', '$status')
-                 ";
+    $db->query("INSERT INTO pegawai (nama, jenis_kelamin, alamat, tempat_lahir, tanggal_lahir, nomor_seluler, status)
+                VALUES ('$nama', '$jenis_kelamin', '$alamat', '$tempat_lahir', '$tanggal_lahir', '$nomor_seluler', '$status')
+              ");
 
-    mysqli_query($connection, $query);
     header("Location:list.php");
 
   } catch (Exception $e) {

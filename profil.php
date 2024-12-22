@@ -3,8 +3,8 @@
   include "connection.php";
 
   $id = $_GET["id"];
-  $query = mysqli_query($connection, "SELECT * FROM pegawai WHERE id=$id");
-  $data = mysqli_fetch_assoc($query);
+  $query = $db->query("SELECT * FROM pegawai WHERE id=$id");
+  $data = $query->fetch();
 ?>
 
 <!DOCTYPE html>

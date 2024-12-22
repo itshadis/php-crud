@@ -2,8 +2,8 @@
   include "connection.php";
 
   $search = $_GET["search"];
-  $query = mysqli_query($connection, "SELECT * FROM pegawai WHERE nama LIKE '%$search%' OR alamat LIKE '%$search%'");
-  $data = mysqli_fetch_all($query, MYSQLI_ASSOC);
+  $query = $db->query("SELECT * FROM pegawai WHERE nama LIKE '%$search%' OR alamat LIKE '%$search%'");
+  $data = $query->fetchAll();
 ?>
 
 <!DOCTYPE html>

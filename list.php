@@ -1,8 +1,8 @@
 <?php 
   include "connection.php";
 
-  $query = mysqli_query($connection, "SELECT * FROM pegawai");
-  $data = mysqli_fetch_all($query, MYSQLI_ASSOC);
+  $query = $db->query("SELECT * FROM pegawai");
+  $data = $query->fetchAll();
 ?>
 
 <!DOCTYPE html>
